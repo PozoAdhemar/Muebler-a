@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('fondo.avif');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px; /* Ajusta el tamaño según tus imágenes */
+    margin: 1em auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slide 9s infinite;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animaciones para cada imagen */
+.carousel-image:nth-child(1) {
+    animation-delay: 0s;
+}
+.carousel-image:nth-child(2) {
+    animation-delay: 3s;
+}
+.carousel-image:nth-child(3) {
+    animation-delay: 6s;
+}
+
+/* Definición de la animación */
+@keyframes slide {
+    0%, 100% {
+        opacity: 0;
+    }
+    33%, 66% {
+        opacity: 1;
+    }
+}
+.welcome-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.welcome-box {
+    flex: 1 1 300px;
+    background-color: #f4f4f4;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.welcome-box h2, .welcome-box h3 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.welcome-box p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.welcome-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Resaltado especial para una caja */
+.highlight {
+    background-color: #ffe0b2;
+    color: #333;
+}
+/* Estilos para la sección de Historia */
+.history-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 1em;
+    background-color: #fafafa;
+    border-top: 4px solid #ffe0b2;
+    border-bottom: 4px solid #ffe0b2;
+}
+
+.history-content {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.history-content h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.history-content p {
+    color: #666;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+.history-image {
+    flex: 1 1 300px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+#catalogo {
+    padding: 3em 1em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#catalogo h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.catalog-grid a {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.catalog-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.catalog-grid a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-grid a:hover img {
+    transform: scale(1.1);
+}
+#catalogo-ninos {
+    padding: 3em 1em;
+    background-color: #f0f9ff; /* Fondo azul suave */
+    text-align: center;
+}
+
+#catalogo-ninos h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.catalog-grid a {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.catalog-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.catalog-grid a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-grid a:hover img {
+    transform: scale(1.1);
+}
+#ventajas-desventajas {
+    padding: 3em 1em;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#ventajas-desventajas h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.ventajas-desventajas-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.ventaja, .desventaja {
+    background-color: #df3737;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    min-width: 300px;
+}
+
+.ventaja h3, .desventaja h3 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+ul li strong {
+    color: #333;
+}
+#videos-audios {
+    padding: 3em 1em;
+    background-color: #fff;
+    text-align: center;
+}
+
+#videos-audios h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.videos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.video iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.audios-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+audio {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+#enlaces {
+    padding: 3em 1em;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#enlaces h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+#enlaces ul {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0;
+}
+
+#enlaces ul li {
+    margin: 0.5em 0;
+}
+
+#enlaces ul li a {
+    font-size: 1.2em;
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#enlaces ul li a:hover {
+    color: #ff6600; /* Cambia el color al pasar el ratón */
+}
